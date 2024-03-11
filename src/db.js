@@ -43,15 +43,6 @@ CountryModel(sequelize);
 
 const { Cars, Category, Country } = sequelize.models;
 
-// Category.belongsToMany(Products, {
-//   through: "ProductsCategory",
-//   timestamps: false,
-// });
-// Products.belongsToMany(Category, {
-//   through: "ProductsCategory",
-//   timestamps: false,
-// });
-
 Cars.belongsTo(Category);
 Category.hasMany(Cars);
 
